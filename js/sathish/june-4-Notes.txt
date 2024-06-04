@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+      <input type="text" id="input">
+      <button onclick="addList()">ADD LIST</button>
+      <button onclick="removeList()">REMOVE LIST</button>
+
+      <ul id="list">
+
+      </ul>
+
+    <script>
+        function addList(){
+            var inputval = document.getElementById("input").value;
+            var text = document.createTextNode(inputval)
+            var li = document.createElement("li");
+            var span = document.createElement("span");
+            if(text.length>5){
+                span.style.color = "green";
+            }else{                
+                span.style.color = "red";
+            }
+            span.appendChild(text);
+            li.appendChild(span);
+
+            var ul = document.getElementById("list");
+            ul.append(li)
+        }
+
+        function removeList(){
+            
+        }
+    </script>
+ 
+  
+</body>
+
+</html>
+
+///////////////////////////////
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+      <input type="text" id="input">
+      <button onclick="addList()">ADD LIST</button>
+      <button onclick="removeList()">REMOVE LIST</button>
+
+      <ul id="list">
+
+      </ul>
+
+    <script>
+        function addList(){
+            var inputval = document.getElementById("input").value;
+            var text = document.createTextNode(inputval)
+            var li = document.createElement("li");
+            
+            if(text.length>5){
+                li.style.color = "green";
+            }else{                
+                li.style.color = "red";
+            }
+            
+            li.appendChild(text);
+
+            var ul = document.getElementById("list");
+            ul.append(li)
+        }
+
+        function removeList(){
+            var list  = document.getElementById("list")
+            list.removeChild(list.firstElementChild)
+        }
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+
+
+-------------------------------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+    <button onclick="onclickevnt()">ONCLICK</button>
+    <button onmouseover="oncmouseovervnt()">ON MOUSEOVER</button>
+    <button onmouseout="oncmouseoutvnt()">ON MOUSEOUT</button>
+    <button onmouseleave="oncmouseleaveevnt()">ON MOUSELEAVE</button>
+    <button oncontextmenu="oncontextevnt()">ON CONTEXTMENU</button>
+    <button ondblclick="ondblclickEvent()">ON DOUBLECLCIK</button>
+
+    <script>
+         function onclickevnt(){
+            console.log("hi im onclick");
+        }
+
+        function oncmouseovervnt(){            
+            console.log("hi im onmouseover");
+         }
+
+         function oncmouseoutvnt(){            
+            console.log("hi im onmouseout..");
+         }
+
+         function oncmouseleaveevnt(){            
+            console.log("hi im onmouseleave..");
+        }
+        
+        function oncontextevnt(){
+             console.log("hi im oncontext menu");
+             
+            }
+            
+            function ondblclickEvent(){
+                
+                console.log("hi im dobule clcik event");
+         }
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+
+--------------------------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+     <input type="text" placeholder="onkeyup event" onkeyup="onkeyupevnt()">
+     <input type="text" placeholder="onkeydown event" onkeyup="onkeydownevnt()">
+     <input type="text" placeholder="onkeypress event" onkeyup="onkeypressevnt()">
+     <input type="text" placeholder="onkeypress event" onfocus="onkeyfocusevnt()">
+
+    <script>
+          
+         function onkeyupevnt(){
+            console.log("hi im onkeyup Event...");
+         }
+
+         function onkeydownevnt(){
+            console.log("hi im onkeydown Event...");
+        }
+        
+        function onkeypressevnt(){
+             console.log("hi im onkeypres Event...");
+             
+            }
+            
+            function onkeyfocusevnt(){
+                
+                console.log("hi im onfocus Event...");
+         }
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+---------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body onload="loadData()">
+      
+      
+
+    <script>
+       
+            function loadData(){
+               setTimeout(()=>{
+                 alert("HI WELCOME TO AIMORE")
+               },4000)
+
+               setInterval(()=>{
+                   console.log("Hi im SET INTERVAL");
+               },2000)
+          }
+       
+        
+          
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+
+----------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+      <select id="food" onchange="getFoodval()">
+          <option value="Chicken">Chicken</option>         
+          <option value="Mutton">Mutton</option>         
+          <option value="Fish">Fish</option>         
+          <option value="Egg">Egg</option>         
+      </select>
+
+      <h2 id="show"></h2>
+      <h2 id="show2"></h2>
+
+    <script>
+       function getFoodval(){
+           var foodval = document.getElementById("food").value;
+           console.log(foodval);
+           document.getElementById("show").innerHTML = `You have slected ${foodval}`;
+           document.getElementById("show2").innerHTML = "you have selected" + " " + foodval;
+       } 
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+
+
+----------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+      <select id="food" onchange="getFoodval()">
+          <option value="Chicken">Chicken Biryani</option>         
+          <option value="Mutton">Mutton Biryani</option>         
+          <option value="Fish">Fish Biryani</option>         
+          <option value="Egg">Egg Biryani</option>         
+      </select>
+     <h2 id="ss"></h2>
+
+    <script>
+       function getFoodval(){
+           var vals = document.getElementById("food").value;
+           var len = vals.length;
+            document.getElementById("ss").innerHTML = 
+            `The selected value is ${vals} and the length is ${len}`
+       }
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+-------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+    <select id="month" onchange="getMonths()">
+        <option value="January">JANUARY</option>
+        <option value="Feburary">Feburary</option>
+        <option value="March">March</option>
+        <option value="April">APRIL</option>
+    </select>
+     
+
+    <script>
+       
+        function getMonths(){
+            var mon = document.getElementById("month").value;
+           console.log(mon);
+            switch (mon) {
+            case "January":
+            console.log("you selected january");            
+            break;
+
+            case "Feburary":
+            console.log("you selected Feburary");            
+            break;
+
+            case "March":
+            console.log("you selected March");            
+            break;
+       
+            default:
+            console.log("nithing selcted");
+            break;
+       }
+        }
+      
+    </script>
+ 
+  
+</body>
+
+</html>
+
+
+
+////////////////
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+      
+   <h2>Copyrights.All rights reserved @ <span id="year"></span></h2>
+     
+
+    <script>
+       var dateval = new Date();
+       document.getElementById("year").innerHTML = dateval.getFullYear();
+
+       console.log(dateval.getMonth()); // 5
+       console.log(dateval.getDay());   //2
+       console.log(dateval.getFullYear());  //2024
+       console.log(dateval.getHours());  //2024
+       console.log(dateval.getMinutes());  //2024
+        
+      
+    </script>
+ 
+  
+</body>
+
+</html>
