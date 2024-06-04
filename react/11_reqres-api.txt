@@ -1,0 +1,157 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { API_URL } from './Env';
+import "./App.css"
+function App() {
+   const [apidata, setApidata] = useState([]);
+   const getapi = () => {
+      axios.get(`${API_URL}/users`)
+         .then((res) => {
+            console.log(res.data.data)
+            setApidata(res.data.data)
+         }).catch((err) => {
+            console.log(err);
+         })
+   }
+   useEffect(() => {
+      getapi()
+   }, [])
+
+   return (
+      <div>
+         <div className="container">
+            <div className="row">
+               <div className="col-md-12">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th scope="col">#</th>
+                           <th scope="col">First Name</th>
+                           <th scope="col">Last Name</th>
+                           <th scope="col">Email</th>
+                           <th scope="col">Profile</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                         {
+                            apidata.map((res)=>{
+                                return(
+                                  <tr key={res.id}>
+                                    <td>{res.id}</td>
+                                    <td>{res.first_name}</td>
+                                    <td>{res.first_name}</td>
+                                    <td>{res.last_name}</td>
+                                    <td>{res.email}</td>
+                                    <td><img src={res.avatar} alt="img" className='img-rounded' /></td>
+                                    
+                                  </tr>
+                                )
+                            })
+                         }
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   )
+}
+
+export default App
+
+
+
+
+-----------------------------------
+
+
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { API_URL } from './Env';
+import "./App.css"
+function App() {
+   const [email, setEmail] = useState([]);
+   const [password, setPassword] = useState([]);
+   const RegisterData = (e)=>{
+     e.preventDefault()
+     axios.post(`${API_URL}/register` , {email,password})
+     .then((res)=>{
+        console.log(res);
+     }).catch((err)=>{
+        console.log(err);
+     })
+   }
+ 
+   useEffect(() => {
+ 
+   }, [])
+
+   return (
+      <div>
+         <div className="container">
+            <div className="row">
+               <div className="col-md-12">
+                   <form onSubmit={RegisterData}>
+                       <input  className="form-control mb-3" type="email"  placeholder='Enter Email' onChange={e=>setEmail(e.target.value)}/>
+                       <input className="form-control mb-3" type="password" placeholder='Enter Password' onChange={e=>setPassword(e.target.value)} />
+                       <button className='btn btn-primary'>Register</button>
+                   </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   )
+}
+
+export default App
+
+
+
+
+----------------------------
+
+
+
+
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { API_URL } from './Env';
+import "./App.css"
+function App() {
+   const [email, setEmail] = useState([]);
+   const [password, setPassword] = useState([]);
+   const logindata = (e)=>{
+     e.preventDefault()
+     axios.post(`${API_URL}/login` , {email})
+     .then((res)=>{
+        console.log(res);
+     }).catch((err)=>{
+        console.log(err);
+     })
+   }
+ 
+   useEffect(() => {
+ 
+   }, [])
+
+   return (
+      <div>
+         <div className="container">
+            <div className="row">
+               <div className="col-md-12">
+                   <form onSubmit={logindata}>
+                       <input  className="form-control mb-3" type="email"  placeholder='Enter Email' onChange={e=>setEmail(e.target.value)}/>
+                       <input className="form-control mb-3" type="password" placeholder='Enter Password' onChange={e=>setPassword(e.target.value)} />
+                       <button className='btn btn-primary'>Register</button>
+                   </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   )
+}
+
+export default App
+
+
+

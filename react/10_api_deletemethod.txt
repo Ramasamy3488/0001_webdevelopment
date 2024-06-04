@@ -1,0 +1,169 @@
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import Register from './Pages/Register'
+import Userlist from './Pages/Userlist'
+import Update from './Pages/Update'
+function App() {
+  return (
+    <div>
+      <Router>
+        <nav class="navbar bg-primary navbar-expand-lg " data-bs-theme="dark">
+          <div class="container-fluid">
+     
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">              <div class="navbar-nav">
+                <Link to="/" class="nav-link">REGISTER</Link>
+                <Link to="/userlist" class="nav-link">USER LIST</Link>
+                
+                       
+               
+              </div>
+            </div>
+          </div>
+        </nav>
+        <Routes>
+          <Route exact path='/' element={<Register></Register>}></Route>
+          <Route   path='/userlist' element={<Userlist></Userlist>}></Route>
+          <Route   path='/update' element={<Update />}></Route>
+        </Routes>
+      </Router>
+    </div>
+  )
+}
+
+export default App
+
+************************************************************************************
+
+import React, { useState } from 'react'
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+function Register() {
+    const [username,setuserName] = useState("")
+    const [email,setEmail] = useState("")
+    const [address,setAddress] = useState("")
+    const [phone,setPhone] = useState("")
+    const [role,setRole] = useState("")
+    const [msg,setMsg]=useState("")
+  const redirection = useNavigate();
+    const addFormData = async(e)=>{
+      e.preventDefault();
+      const formDatas = {username,email,address,phone,role}
+     await axios.post("https://65e1cba4a8583365b317506b.mockapi.io/users" ,formDatas)
+      .then((res)=>{
+          console.log(res , "Data Submitted...");
+           setMsg("Form submitted..successfully")
+          setTimeout(()=>{
+            redirection("/userlist")
+          },2000)
+      }).catch((err)=>{
+          console.log(err);
+      })
+    }
+  return (
+    <div>
+        <div className="container">
+            <div className="row">
+                 
+                 <div className="col-md-6 offset-md-3 py-5">
+                    <h2>Register Details</h2>
+                     <form onSubmit={addFormData}>
+                        <div className='form-group mb-2'>
+                            <input type="text"  className='form-control'
+                             placeholder='Enter Username' onChange={e=>setuserName(e.target.value)}/>
+                        </div>
+
+                        <div className='form-group mb-2'>
+                            <input type="email"  className='form-control' 
+                            placeholder='Enter email' onChange={e=>setEmail(e.target.value)}/>
+                        </div>
+                        <div className='form-group mb-2'>
+                            <input type="text"  className='form-control' 
+                            placeholder='Enter address' onChange={e=>setAddress(e.target.value)}/>
+                        </div>
+
+                        <div className='form-group mb-2'>
+                            <input type="text"  className='form-control' 
+                            placeholder='Enter phone' onChange={e=>setPhone(e.target.value)}/>
+                        </div>
+
+                        <div className='form-group mb-2'>
+                            <input type="text"  className='form-control'
+                             placeholder='Enter Role' onChange={e=>setRole(e.target.value)}/>
+                        </div>
+
+                        <div className='form-group mb-2'>
+                            <button type="submit" class="btn btn-primary">REGISTER </button>
+                        </div>
+                     
+                     </form>
+                     <h3>{msg}</h3>
+                 </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Register
+
+
+*****************************************************************************
+
+import axios from 'axios';
+import React, { useEffect, useLayoutEffect, useState } from 'react'
+
+function Userlist() {
+  const [apiData,setApiData]= useState([]);
+  const apiCollect = ()=>{
+      axios.get("https://65e1cba4a8583365b317506b.mockapi.io/users")
+      .then((res)=>{
+          console.log(res);
+          setApiData(res.data)
+      }).catch((err)=>{
+          console.log(err);
+      })
+  }
+  useEffect(()=>{
+    apiCollect()
+  },[])
+
+  const deleteData = (id)=>{
+      axios.delete(`https://65e1cba4a8583365b317506b.mockapi.io/users/${id}`)
+      .then((res)=>{
+         console.log("Data Deleted");
+         apiCollect()
+      }).catch((err)=>{
+          console.log(err);
+      })
+  }
+ 
+  return (
+    <div>
+         <div className="container">
+          <div className="row">
+              {
+                apiData.map((res)=>{
+                   return(
+                     <div className='col-md-4 py-5 mb-3 mt-2' key={res.id}>
+                         <img src={res.avatar}/>
+                         <h2>{res.username}</h2>
+                         <h4>{res.email}</h4>
+                         <h4>{res.phone}</h4>
+                         <h4>{res.address}</h4>
+                         <h5>{res.createdAt}</h5>
+                         <h6>{res.role}</h6>
+                         <button className='btn btn-danger me-2' onClick={(e)=>deleteData(res.id)}>Delete</button>
+                         <button className='btn btn-info'>Edit</button>
+
+                     </div>
+                   )
+                })
+              }
+          </div>
+         </div>
+    </div>
+  )
+}
+
+export default Userlist
+
