@@ -1,0 +1,447 @@
+1.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./Css/Style.css">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    -->
+   <title>Document</title>
+   <script src="../pages/index2.js"></script>
+</head>
+
+<body>
+      <div class="container">
+           <div class="boxes">
+                <div>
+                   <h2>Heading</h2>
+                   <img src="./images/f1.avif" alt="">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis inventore, harum beatae amet ad itaque officia reprehenderit similique, reiciendis minima dignissimos facilis quidem architecto laudantium ab commodi, ut assumenda expedita.</p>
+                </div>
+                <div>
+                  <h2>Heading</h2>
+                  <img src="./images/f1.avif" alt="">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis inventore, harum beatae amet ad itaque officia reprehenderit similique, reiciendis minima dignissimos facilis quidem architecto laudantium ab commodi, ut assumenda expedita.</p>
+               </div>
+               <div>
+                  <h2>Heading</h2>
+                  <img src="./images/f1.avif" alt="">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis inventore, harum beatae amet ad itaque officia reprehenderit similique, reiciendis minima dignissimos facilis quidem architecto laudantium ab commodi, ut assumenda expedita.</p>
+               </div>
+           </div>
+      </div>
+
+      <div class="container">
+         <div class="boxes">
+              <div>
+                 <h2>Heading</h2>
+                 <img src="./images/f1.avif" alt="">
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis inventore, harum beatae amet ad itaque officia reprehenderit similique, reiciendis minima dignissimos facilis quidem architecto laudantium ab commodi, ut assumenda expedita.</p>
+              </div>
+              <div>
+                <h2>Heading</h2>
+                <img src="./images/f1.avif" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis inventore, harum beatae amet ad itaque officia reprehenderit similique, reiciendis minima dignissimos facilis quidem architecto laudantium ab commodi, ut assumenda expedita.</p>
+             </div>
+          
+         </div>
+    </div>
+</body>
+
+</html>
+
+
+-----
+
+
+CSS---
+
+
+/* /Default CSS starst here */
+body {
+    font-family: "myfont-regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "myfont-bold";
+}
+
+@font-face {
+    font-family: "myfont-regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "myfont-bold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+ 
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* /Default CSS ends here */
+
+
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px 0;
+}
+.boxes img{
+    border-radius: 20px;
+}
+.boxes p{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+.boxes h5{
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.bg {
+    background-color: #1e044e;
+    color: #fff;
+}
+.bg h2 {
+    color: #fff;
+    margin: 20px 0;
+}
+.bg .boxes{
+    margin: 10px 0;
+}
+
+--------------------------------------------------------------------------
+2. 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./Css/Style.css">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    -->
+   <title>Document</title>
+   <script src="../pages/index2.js"></script>
+</head>
+
+<body>
+    <section class="main-bg">
+        <div class="overlaycolor"></div>
+         <div class="content">
+               <h1>Welcome to Aimore Technologies</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus accusantium sint iste ratione, non nam repellat hic inventore eaque. Ea earum culpa, deleniti beatae aut accusantium quasi at inventore explicabo.</p>
+                <button>Read More</button>
+         </div>
+    </section>
+
+ 
+</body>
+
+</html>
+
+
+
+----
+
+CSS----
+
+
+/* /Default CSS starst here */
+body {
+    font-family: "myfont-regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "myfont-bold";
+}
+
+@font-face {
+    font-family: "myfont-regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "myfont-bold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+ 
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* /Default CSS ends here */
+ 
+
+.main-bg{
+    background-image: url("../images/nature.jpg");
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.main-bg .content {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.overlaycolor {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(50deg, #6b1829, #00000082);
+    position: absolute;
+}
+
+
+
+---------------------------------------------------------------------------
+3.
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./Css/Style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    -->
+   <title>Document</title>
+   <script src="../pages/index2.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <div class="foods-item">
+         <div class="inner-body">
+            <div class="overlay-color"></div>            
+            <img src="./images/food-1.avif" alt="">            
+            <div class="content">
+                <h4>50% OFF UPTO $100</h4>
+                <p>Pizza Hut</p>
+                <p class="star-flex"> <img class="star" src="./images/star.png" alt=""> <span>4.3 30-35 MINS</span> </p>
+                <p>NUNGAMBAKKAM</p>
+            </div>
+         </div>
+         <div class="inner-body">
+            <div class="overlay-color"></div>         
+            <img src="./images/food-2.avif" alt="">
+            <div class="content">
+               <h4>50% OFF UPTO $100</h4>
+               <p>Pizza Hut</p>
+               <p class="star-flex"> <img class="star" src="./images/star.png" alt=""> <span>4.3 30-35 MINS</span> </p>
+               <p>NUNGAMBAKKAM</p>
+           </div>
+         </div>
+         <div class="inner-body">
+            <div class="overlay-color"></div>         
+            <img src="./images/food-3.avif" alt="">
+            <div class="content">
+               <h4>50% OFF UPTO $100</h4>
+               <p>Pizza Hut</p>
+               <p class="star-flex"> <img class="star" src="./images/star.png" alt=""> <span>4.3 30-35 MINS</span> </p>
+               <p>NUNGAMBAKKAM</p>
+           </div>
+         </div>
+         <div class="inner-body">
+            <div class="overlay-color"></div>         
+            <img src="./images/food-4.avif" alt="">
+            <div class="content">
+               <h4>50% OFF UPTO $100</h4>
+               <p>Pizza Hut</p>
+               <p class="star-flex"> <img class="star" src="./images/star.png" alt=""> <span>4.3 30-35 MINS</span> </p>
+               <p>NUNGAMBAKKAM</p>
+           </div>
+         </div>
+         <div class="inner-body">
+            <div class="overlay-color"></div>            
+            <img src="./images/food-1.avif" alt="">            
+            <div class="content">
+                <h4>50% OFF UPTO $100</h4>
+                <p>Pizza Hut</p>
+                <p class="star-flex"> <img class="star" src="./images/star.png" alt=""> <span>4.3 30-35 MINS</span> </p>
+                <p>NUNGAMBAKKAM</p>
+            </div>
+         </div>
+  
+      </div>
+   </div>
+</body>
+
+</html>
+
+
+
+-----
+
+CSS----->
+
+
+/* /Default CSS starst here */
+body {
+    font-family: "myfont-regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "myfont-bold";
+}
+
+@font-face {
+    font-family: "myfont-regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "myfont-bold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+ 
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* /Default CSS ends here */
+ 
+.foods-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 50px 0;
+}
+.foods-item img{
+  border-radius: 30px;
+  height: 220px;
+  width: auto;
+}
+ 
+.foods-item .inner-body{
+    position: relative;
+}
+
+.foods-item .inner-body .overlay-color {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #0000006e;
+}
+.foods-item .inner-body .content {
+    position: absolute;
+    top: 68%;
+    padding: 10px;
+}
+
+.foods-item .inner-body .overlay-color {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(353deg, #000000e0, transparent);
+}
+
+.foods-item .inner-body .content h4 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.foods-item .inner-body .content p {
+    font-size: 12px;
+    line-height: 9px;
+    padding: 0;
+    margin: 10px 0;
+}
+.star{
+    width: 16px!important;
+    height: 16px!important;
+    padding: 0 5px 0px 0;
+}
+.star-flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+}
+.inner-body{
+    transition: all .2s ease-in;
+}
+.inner-body:hover{
+    transform: scale(.9);
+    transition: all .2s ease-in;
+}

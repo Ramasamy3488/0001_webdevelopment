@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./Css/Style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    -->
+   <title>Document</title>
+   <script src="../pages/index2.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-box">
+            <div>
+               <img src="./images/f1.avif" alt="">
+            </div>
+            <div>
+              <h4>Horror Thriller</h4>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam voluptatem assumenda dolorem quisquam, officia culpa est necessitatibus quaerat, iusto laborum libero maxime. Voluptatem minima blanditiis rerum ab, consectetur tempora!</p>
+            </div>
+            <div>
+               <img src="./images/f2.avif" alt="">
+            </div>
+            
+           
+        </div>
+    </div>
+</body>
+
+</html>
+----
+
+
+CSS---
+
+
+/* /Default CSS starst here */
+body {
+    font-family: "myfont-regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "myfont-bold";
+}
+
+@font-face {
+    font-family: "myfont-regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "myfont-bold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+ 
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* /Default CSS ends here */ 
+
+
+.main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.main-box div{
+    width: 33%;
+}
+
+
+----------------------------------------------------------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./Css/Style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    -->
+   <title>Document</title>
+   <script src="../pages/index2.js"></script>
+</head>
+
+<body>
+     <section class="main-bg">
+         <div class="container">
+            <header class="main-menu">
+                 <div class="left">
+                     <h5>Get the App</h5>
+                 </div>
+                 <ul>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Add Restaurant</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signup</a></li>
+                 </ul>
+            </header>
+         </div>
+
+         <div class="container">
+             <div class="logo">
+                 <img src="./images/zomoto-logo.avif" alt="">
+             </div>
+         </div>
+         <div class="container">
+             <h2 class="banner-heading">Discover the best food & drinks in Chennai</h2>
+             <div class="search-box">
+                 <div class="first-input">
+                    <input type="text" placeholder="Chennai">
+                    <div class="location">
+                     <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="downarrow">
+                     <i class="bi bi-caret-down-fill"></i>
+                    </div>
+                 </div>
+                 <div class="second-input">
+                  <input type="text" placeholder="Search for restaurant, cuisine or a dish" >
+                  <div class="search-icon">
+                     <i class="bi bi-search"></i>
+                  </div>
+               </div>
+             </div>
+         </div>
+     </section>
+
+     <section class="below-banner">
+      <div class="container">
+         <div class="dishes">
+            <div class="inner-box">
+                <img src="./images/z1.avif" alt="img">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h4>Order Online</h4>
+                    <p>Stay home and order to your doorstep</p>
+                </div>
+            </div>
+            <div class="inner-box">
+              <img src="./images/z2.avif" alt="img">
+              <div class="overlay"></div>
+              <div class="content">
+                  <h4>Order Online</h4>
+                  <p>Stay home and order to your doorstep</p>
+              </div>
+          </div>
+          <div class="inner-box">
+           <img src="./images/z3.avif" alt="img">
+           <div class="overlay"></div>
+           <div class="content">
+               <h4>Order Online</h4>
+               <p>Stay home and order to your doorstep</p>
+           </div>
+       </div>
+            
+        </div>
+      </div>
+       
+     </section>
+</body>
+
+</html>
+------
+
+
+CSS----
+
+
+/* /Default CSS starst here */
+body {
+    font-family: "myfont-regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "myfont-bold";
+}
+
+@font-face {
+    font-family: "myfont-regular";
+    src: url("../fonts/Metropolis-Regular.otf");
+}
+@font-face {
+    font-family: "myfont-bold";
+    src: url("../fonts/Metropolis-Bold.otf");
+}
+@font-face {
+    font-family: "myfont-medium";
+    src: url("../fonts/Metropolis-Medium.otf");
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+ol,ul{
+    list-style: none;
+}
+a{text-decoration: none;}
+
+/* /Default CSS ends here */ 
+
+.main-bg{
+    height: 450px;
+    width: 100%;
+    background-image: url("../images/food-bg.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.main-menu, .main-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-menu li {
+    padding: 0 15px;
+}
+
+.main-menu li a {
+    color: #fff;
+    font-size: 20px;
+}
+.left h5 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 270px;
+}
+.logo {
+    margin: 25px auto;
+    width: 350px;
+}
+.banner-heading{
+    font-family: "myfont-regular";
+}
+.banner-heading {
+    font-family: "myfont-regular";
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.first-input, .second-input{
+    position: relative;
+}
+.first-input input {
+    padding: 15px 30px;
+    width: 245px;
+}
+.second-input input{
+    padding: 15px 40px;
+    width: 480px;
+}
+.location {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.location .bi {
+    color: orange;
+}
+.downarrow {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.search-icon {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+.dishes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.below-banner{
+    margin: 50px 0;
+}
+.inner-box{
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 70%;
+    padding: 4px;
+    
+}
+
+.inner-box img {
+    border-radius: 10px;
+    border: 2px solid gainsboro;
+}
+
+.overlay {
+    border: 1px solid #dedede;
+    position: absolute;
+    height: 105px;
+    width: 101%;
+    background-color: #ffffff;
+    top: 214px;
+    left: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.inner-box h4  {
+    margin: 0;
+    padding: 0;
+}
+.inner-box p {
+    margin: 10px 0;
+    padding: 0;
+}
+.inner-box:hover{
+    transform: scale(1.05);
+    transition: all .3s ease;
+}

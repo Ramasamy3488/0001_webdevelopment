@@ -1,0 +1,228 @@
+CSS --Casecading Style sheets
+
+Internal
+External 
+Inline
+
+---------------------
+
+html--
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+     <h2 class="one" style="color: orange;">Welcome</h2>
+     <h2 class="one">Welcome</h2>
+     <h2 id="one">Welcome New</h2>
+
+</body>
+</html>
+
+
+
+
+CSS----
+
+h2{
+    color: red;
+    font-size: 30px;
+ }
+ .one{
+    color: blue;
+    font-size: 30px;
+ }
+ #one{
+    color: green;
+    font-size: 30px;
+ }
+
+
+---------------------------------------------------------------------------
+
+
+html ----
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="heading">sskhsjfsj</h2>
+</body>
+</html>
+
+
+
+
+
+CSS---
+
+.heading {
+    font-size: 25px;
+    text-align: center;
+    text-decoration: line-through;
+    border: 6px solid red;
+    border-style: dashed;
+    padding: 100px 10px;
+    /* padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px; */
+    margin: 100px 50px;
+}
+
+
+-------------------------------------------------------------------------------------------------
+
+
+html---
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+     <div class="green">
+       <h1>Im green</h1>
+     </div>
+     <div class="red">
+      <h1>Im purple </h1>
+     </div>
+</body>
+</html>
+
+
+
+CSS---
+
+
+.green {
+    height: 200px;
+    width: 200px;
+    background-color: rebeccapurple;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all .5s ease-in;
+}
+.red {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(187, 13, 42);
+    padding: 20px;
+    border-radius: 50%;
+    margin: 20px;
+    transition: all .5s ease-in;
+}
+.green h1{
+    color: #ffffff;
+}
+.red h1{
+    color: #fff;
+}
+.green:hover{
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 20%;
+    transition: all .5s ease-in;
+}
+.red:hover{
+    background-color: #08741b;
+    cursor: pointer;
+    border-radius: 20%;
+    transition: all .5s ease-in;
+}
+
+
+
+---------------------------------------------------------------------------
+
+
+html----
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+     <div class="images">
+        <!-- First Child -->
+         <img src="./images/first.avif" alt="">   
+         <!-- Second child -->
+         <img src="./images/second.avif" alt="">
+     </div>
+
+     <div class="box"></div>
+</body>
+</html>
+
+
+
+CSS-----
+
+
+
+.images img{
+    width: 250px;
+    height: 250px;
+    transition: all .5s ease-in;
+    border: 5px solid black;
+    border-radius: 100px;
+}
+
+
+
+.images img:nth-child(1):hover{
+    transform: scale(.8);
+    transition: all .3s ease-in;
+    border: 5px solid black;
+    border-radius: 0px;
+}
+
+.images img:nth-child(2):hover{
+    transform: rotate(180deg);
+    transition: all .3s ease-out;
+    border: 5px solid black;
+    border-radius: 0px;
+}
+.box{
+    height: 140px;
+    width: 300px;
+    background-color: red;
+    transition: all .8s ease-out;
+}
+.box:hover{
+    width: 900px;
+    transition: all .8s ease-out;
+}
